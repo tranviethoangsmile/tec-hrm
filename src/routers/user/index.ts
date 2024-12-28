@@ -1,0 +1,13 @@
+import { Router } from 'express';
+import createUserRouter from './create.router';
+import getUserByIdRouter from './get_user_by_id.router';
+import getAllUserRouter from './get_all_user.router';
+import getAllUserByCompanyIdRouter from './get_all_by_company_id.router';
+import getAllByPositionRouter from './get_all_by_position.router';
+const userRouter: Router = Router();
+userRouter.use('/create', createUserRouter);
+userRouter.use('/get-by-id', getUserByIdRouter);
+userRouter.use('/get-all', getAllUserRouter);
+userRouter.use('/get-all-by-company-id', getAllUserByCompanyIdRouter);
+userRouter.use('/get-all-by-position', getAllByPositionRouter);
+export default userRouter;

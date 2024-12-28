@@ -1,0 +1,11 @@
+ version: '3'
+ services: 
+  hoangdev: 
+    image: tranviethoangsmile/tec-hrm:v1
+    ports:
+      - 54323:5432
+    environment: 
+      POSTGRES_USER: hoangdev
+      POSTGRES_PASSWORD: ${PRO_DB_PASSWORD}
+    volumes: 
+      - /Users/hoangdev/Desktop/docker-data-tec:/var/lib/postgresql/data 
